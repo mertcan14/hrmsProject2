@@ -10,7 +10,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
-import kodlamaio.hrmsproject.entities.abstracts.User;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -22,6 +23,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "employees")
 @PrimaryKeyJoinColumn(name = "user_id")
 @EqualsAndHashCode(callSuper = false)
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler","verificationEmployees"})
 public class Employee extends User {
 
 	@Column(name = "first_name")
@@ -30,7 +32,8 @@ public class Employee extends User {
 	@Column(name = "last_name")
 	private String lastName;
 	
-	
+	@OneToMany(mappedBy = "employee")
+	private List<VerificationEmployee> verificationEmployees;
 
 	public String getFirstName() {
 		return firstName;

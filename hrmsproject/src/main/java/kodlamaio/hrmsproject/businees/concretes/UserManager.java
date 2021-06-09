@@ -9,7 +9,7 @@ import kodlamaio.hrmsproject.core.utilities.results.Result;
 import kodlamaio.hrmsproject.core.utilities.results.SuccessDataResult;
 import kodlamaio.hrmsproject.core.utilities.results.SuccessResult;
 import kodlamaio.hrmsproject.dataAccess.abstracts.UserDao;
-import kodlamaio.hrmsproject.entities.abstracts.User;
+import kodlamaio.hrmsproject.entities.concretes.User;
 
 @Service
 public class UserManager implements UserService{

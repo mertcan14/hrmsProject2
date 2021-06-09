@@ -2,7 +2,7 @@ package kodlamaio.hrmsproject.businees.abstracts;
 
 import kodlamaio.hrmsproject.core.utilities.results.DataResult;
 import kodlamaio.hrmsproject.core.utilities.results.Result;
-import kodlamaio.hrmsproject.entities.abstracts.User;
+import kodlamaio.hrmsproject.entities.concretes.User;
 
 public interface UserService {
 	DataResult<User> getByEmail(String email);

@@ -38,8 +38,7 @@ public class EmployeeManager implements EmployeeService{
 
 	@Override
 	public DataResult<Employee> getByEmail(String string) {
-		// TODO Auto-generated method stub
-		return null;
+		return new SuccessDataResult<Employee>(this.employeeDao.findEmployeeByEmail(string), "Bulundu");
 	}
 
 }

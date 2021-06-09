@@ -133,7 +133,7 @@ public class AuthManager implements AuthService{
 		var result = employerService.getByEmail(email);
 		var resultt = employeeService.getByEmail("mert@gmail.com");
 		Date date = new Date(System.currentTimeMillis());
-		VerificationEmployee newVerification = new VerificationEmployee(0,true, date, 3, result.getData().getId());
+		VerificationEmployee newVerification = new VerificationEmployee(0,true, date, resultt.getData(), result.getData());
 		var resulttt = verificationEmployeeService.add(newVerification);
 		System.out.println(resulttt.getMessage());
 	}

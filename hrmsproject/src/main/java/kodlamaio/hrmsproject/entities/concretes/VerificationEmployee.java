@@ -33,10 +33,12 @@ public class VerificationEmployee {
 	@Column(name = "approve_date")
 	private Date approveDate;
 	
-	@Column(name="employee_id")
-	private int employee;
+	@ManyToOne()
+	@JoinColumn(name="employee_id")
+	private Employee employee;
 	
-	@Column(name="employer_id")
-	private int employer;
+	@ManyToOne()
+	@JoinColumn(name="employer_id")
+	private Employer employer;
 	
 }

@@ -5,7 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
-import kodlamaio.hrmsproject.entities.abstracts.User;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -16,6 +17,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "job_seekers")
 @PrimaryKeyJoinColumn(name = "user_id")
 @EqualsAndHashCode(callSuper = false)
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler","jobAdverts"})
 public class JobSeeker extends User{
 	
 	@Column(name = "first_name")
