@@ -44,4 +44,9 @@ public class JobSeekerManager implements JobSeekerService{
 		return new SuccessResult("Başarı ile oluşturuldu");
 	}
 
+	@Override
+	public DataResult<JobSeeker> getById(int id) {
+		return new SuccessDataResult<JobSeeker>(this.jobSeekerDao.findJobSeekerById(id));
+	}
+
 }
