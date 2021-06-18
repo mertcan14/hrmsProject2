@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import kodlamaio.hrmsproject.businees.abstracts.JobSeekerService;
 import kodlamaio.hrmsproject.core.utilities.results.DataResult;
 import kodlamaio.hrmsproject.entities.concretes.JobSeeker;
+import kodlamaio.hrmsproject.entities.dtos.JobSeekerCv;
 
 @RestController
 @RequestMapping("/api/jobseekers")

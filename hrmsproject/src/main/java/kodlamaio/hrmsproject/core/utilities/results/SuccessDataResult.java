@@ -1,5 +1,8 @@
 package kodlamaio.hrmsproject.core.utilities.results;
 
+import java.util.Optional;
+
+
 public class SuccessDataResult<T> extends DataResult<T>{
 
 	public SuccessDataResult(T data, String message) {
@@ -16,5 +19,9 @@ public class SuccessDataResult<T> extends DataResult<T>{
 	
 	public SuccessDataResult() {
 		super(null, true);
+	}
+
+	public SuccessDataResult(Optional<T> findById) {
+		super(findById.get(), true);
 	}
 }
